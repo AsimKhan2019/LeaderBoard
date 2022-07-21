@@ -1,0 +1,64 @@
+header {
+  display: flex;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 45%;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+}
+
+.refresh {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+}
+
+.refresh input[type=button] {
+  align-self: center;
+}
+
+.list ol {
+  border: 1px solid black;
+  padding: 0;
+}
+
+.list ol li {
+  list-style-position: inside;
+  padding: 5px;
+}
+
+.list ol li:nth-of-type(even) {
+  background-color: lightgray;
+}
+
+.list li .score {
+  text-align: right;
+  float: right;
+}
+
+section.add {
+  display: flex;
+  flex-direction: column;
+}
+
+section.add form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+section.add form input[type=button] {
+  align-self: flex-end;
+}
+
+.container {
+  padding-left: 17%;
+}
