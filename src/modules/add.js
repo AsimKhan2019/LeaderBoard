@@ -3,7 +3,7 @@ import apiURL from './api.js';
 const player = document.getElementById('player');
 const score = document.getElementById('score');
 
-export default async function addScore() {
+export const addScore = async () => {
   await fetch(apiURL, {
 
     method: 'POST',
@@ -18,4 +18,4 @@ export default async function addScore() {
 
   player.value = '';
   score.value = '';
-}
+};

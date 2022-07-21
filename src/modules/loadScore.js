@@ -2,7 +2,7 @@ import apiURL from './api.js';
 
 const scoreList = document.getElementById('scoreList');
 
-export default async function loadScore() {
+export const loadScore = async () => {
   await fetch(apiURL)
     .then((response) => response.json())
     .then((json) => {
@@ -22,4 +22,4 @@ export default async function loadScore() {
           scoreList.append(li);
         });
     });
-}
+};

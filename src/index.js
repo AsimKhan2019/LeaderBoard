@@ -1,19 +1,19 @@
 import './style.css';
-import renderHTML from './modules/render.js';
-import addScore from './modules/add.js';
-import loadScore from './modules/loadScore.js';
+
+const realScore = require('./modules/loadScore.js');
+const addScore = require('./modules/add.js');
 
 const refreshBtn = document.getElementById('refresh');
 const scoreBtn = document.getElementById('submitScore');
 
 window.addEventListener('load', async () => {
-  await loadScore();
+  await realScore.loadScore();
 });
 
 refreshBtn.addEventListener('click', async () => {
-  await renderHTML();
+  await realScore.loadScore();
 });
 
 scoreBtn.addEventListener('click', async () => {
-  await addScore();
+  await addScore.addScore();
 });
